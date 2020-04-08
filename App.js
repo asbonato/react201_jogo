@@ -5,7 +5,7 @@ import TelaComecoDoJogo from './telas/TelaComecoDoJogo';
 
 export default function App() {
   return (
-    <View>
+    <View style={estilos.tela}>
       <Cabecalho titulo={"Adivinhe o número"} />
       <TelaComecoDoJogo />
     </View>
@@ -13,5 +13,9 @@ export default function App() {
 }
 
 const estilos = StyleSheet.create({
-
+  tela: {
+    flex: 1, //toma todo o espaço que puder
+    padding: 10,
+    alignItems: 'center'
+  }
 });
