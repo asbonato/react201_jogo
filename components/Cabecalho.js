@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import Cores from '../cores/cores';
 
 const Titulo = (props) => {
     return (
@@ -15,6 +16,7 @@ const estilos = StyleSheet.create({
         width: '100%',
         height: 95,
         paddingTop: 40,
+        backgroundColor: Cores.primary,
         backgroundColor: '#2196F3',
         alignItems: 'center',
         justifyContent: 'center'
@@ -26,7 +28,6 @@ const estilos = StyleSheet.create({
     }
 
 });
-
 
 
 export default Titulo;

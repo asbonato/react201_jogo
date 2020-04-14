@@ -1,24 +1,43 @@
 import React from 'react';
 import { Text, View, StyleSheet, TextInput, Button } from 'react-native';
+import Cartao from '../components/Cartao'
+import Cores from '../cores/cores'
+import Entrada from '../components/Entrada'
 
 const TelaComecoDoJogo = (props) => {
     return (
         <View style={estilos.tela}>
             <Text style={estilos.titulo}>Comece um jogo</Text>
-            <View style={estilos.entradaView}>
+            <Cartao estilos={estilos.entradaView}>
                 <Text>Escolha um número</Text>
-                <TextInput />
+                <Entrada
+                    style={estilos.entrada}
+                    autoCapitalize='none'
+                    blurOnSubmit
+                    autoCorrect={false}
+                    keyboardType="number-pad"
+                    maxLenth={2}
+                />
+
                 <View style={estilos.buttonsView}>
-                    <Button
-                        title="Reiniciar"
-                    />
-                    <Button
-                        title="Confirmar" />
+                    <View style={estilos.botao}>
+                        <Button
+                            title="Reiniciar"
+                            color={Cores.accent}
+                        />
+                    </View>
+                    <View style={estilos.botao}>
+                        <Button
+                            title="Confirmar"
+                            color={Cores.accent}
+                        />
+                    </View>
                 </View>
-            </View>
+            </Cartao>
         </View>
     );
 }
+
 
 
 const estilos = StyleSheet.create({
@@ -26,6 +45,7 @@ const estilos = StyleSheet.create({
         flex: 1, //toma todo o espaço que puder
         padding: 10,
         alignItems: 'center'
+
     },
     titulo: {
         fontSize: 20,
@@ -36,8 +56,6 @@ const estilos = StyleSheet.create({
         width: 300,
         //mas no máximo, 80% da tela
         maxWidth: '80%',
-        //alinhamento no eixo perpendicular (horizontal, neste caso)
-        alignItems: 'center'
     },
     buttonsView: {
         //o padrão é column
@@ -46,8 +64,16 @@ const estilos = StyleSheet.create({
         // alinhamento no eixo principal (horizontal, neste caso) 
         justifyContent: 'space-between',
         paddingHorizontal: 15
+    },
+    botao: {
+        width: 100
+    },
+    entrada: {
+        width: 50,
+        textAlign: 'center'
     }
-});
 
+
+});
 
 export default TelaComecoDoJogo;
