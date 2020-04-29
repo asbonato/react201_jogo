@@ -7,14 +7,14 @@ const Entrada = (props) => {
     );
 };
 
-
-
 const estilos = StyleSheet.create({
     entrada: {
         height: 30,
         borderBottomColor: 'grey',
         borderBottomWidth: 1,
-        marginVertical: 10
+        marginVertical: 10,
+        width: 40,
+        textAlign: 'center'
 
     }
 });

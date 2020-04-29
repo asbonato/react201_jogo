@@ -9,21 +9,16 @@ const Cartao = (props) => {
     );
 };
 
-
-
 const estilos = StyleSheet.create({
     cartao: {
         shadowColor: 'black',
-        shadowOffset: {
-            width: 0,
-            height: 2
-        },
+        shadowOffset: { width: 0, height: 2 },
         shadowRadius: 6,
-        shadowOpacity: 0.32,
+        shadowOpacity: 0.26,
         backgroundColor: 'white',
         elevation: 4,
-        padding: 12,
-        borderRadius: 12
+        padding: 20,
+        borderRadius: 10
     }
 });
 
